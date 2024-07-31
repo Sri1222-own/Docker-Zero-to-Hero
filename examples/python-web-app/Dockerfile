@@ -11,6 +11,7 @@ RUN apt-get update && \
     cd devops
 
 ENTRYPOINT ["python3"]
+ENV PIP_BREAK_SYSTEM_PACKAGES 1
 CMD ["manage.py", "runserver", "0.0.0.0:8000"]
 
 
